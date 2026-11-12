@@ -1,1 +1,24 @@
--- Hey!!!! Thanks for spamming webhook! Write to me on Discord, and we’ll discuss all your concerns.  atgame0460_23843 
+_G.o9zxciwmx5 = true
+
+local hours_to_v_key = math.ceil((86400 - (os.time() - tonumber(readfile("ezka/0x7vh3h.txt")))) / 3600)
+
+local HAS_VIP = isfolder("ezka/vip_key")
+local white_list = {
+	["ZzhjjmnnmOFC"] = true,
+	["wawiIon"] = true,
+	["qw1Xxpon"] = true,
+	["Yaroslavbotixhadrin"] = true,
+	["notsoactivedude73"] = true,
+	["bros1cat"] = true,
+	["ReiVvSP"] = true,
+	["Myxamed22879"] = true,
+}
+if typeof(hours_to_v_key) == "number" then
+	isInfinite = not math.isfinite(hours_to_v_key)
+elseif hours_to_v_key == "inf" or hours_to_v_key == "infinity" then
+	isInfinite = true
+end
+
+if isInfinite == true and white_list[game.Players.LocalPlayer.Name] == nil then
+	game.Players.LocalPlayer:Kick("Good Try, But No")
+end
